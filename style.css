@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --white-color: hsl(0, 0%, 100%);
+}
+body{
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+.container{
+    background-color: var(--light-gray);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background-color: var(--white-color);
+    border-radius: 8px;
+    width: 800px;
+    overflow: hidden;
+}
+.card__header{
+    padding: 36px;
+}
+.card__header h1{
+    color: var(--cyan);
+}
+.card__header p.hightlight{
+    color: var(--bright-yellow);
+    font-weight: 700;
+    margin: 36px auto 16px;
+}
+.card__price{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.card__price--left,
+.card__price--right{
+    width: 50%;
+    padding: 36px;
+    color: var(--light-gray);
+}
+.card__price--left{
+    background-color: var(--cyan);
+}
+.card__price--right{
+    background-color: hsl(179, 65%, 51%);
+}
+.card__price h4{
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+}
+.card__price--left p>span{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--light-gray);
+}
+.card__price--left p{
+    margin-bottom: 12px;
+}
+.card__price--left a{
+    text-decoration: none;
+    background-color: var(--bright-yellow);
+    color: var(--light-gray);
+    box-shadow: 0 0 5px var(--bright-yellow);
+    display: block;
+    padding: 12px;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 8px;
+}
+.card__price--right p{
+    white-space: pre-line;
+    line-height: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        height: auto;
+    }
+    .card{
+        width: 90%;
+        margin: 36px auto;
+    }
+    .card__header h1{
+        font-size: 1.5rem;
+    }
+    .card__header p.hightlight{
+        margin: 24px auto 16px;
+    }
+    .card__price{
+        flex-direction: column;
+    }
+    .card__price--left,
+    .card__price--right{
+        width: 100%;
+    }
+}
